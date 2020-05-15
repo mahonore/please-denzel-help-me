@@ -132,6 +132,7 @@ console.log('Q9', duplicate(['Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for'
 // The lesson for me was to always save a project and save old versions.
 
 //Q19
+// I like to use Visual Studio Code as Text Editor, I think it's a really good one.
 
 //Q20
 // the title of the course is "Web Application Architecture(s)" and not "Web Application Architecture" because it doesn't exist only one architecture.

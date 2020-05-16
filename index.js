@@ -84,6 +84,7 @@ console.log('Q9', duplicate(['Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for'
 //Q10
 
 //Q11 
+document.querySelectorAll('#credits > div > article > div > div > strong > a');
 
 //Q12
 // I think there are less than 50 http requests because in the source code we can find 
@@ -113,8 +114,28 @@ console.log('Q9', duplicate(['Happily', 'Ever', 'After', 'Fairy', 'Tales', 'for'
 //This profile isn't complete, it miss some caracteristics such as the country and the birthday.
 
 //Q14
-  
+console.log('Q14');
+const fs = require('fs').promises;
+const filepath = 'test';
+fs.readFile(filepath)
+ .then((data) => {
+   console.log(data);
+ })
+ .catch((err) =>{
+   console.log(err);
+ })
+
 //Q15
+console.log('Q15');
+async function main() {
+  let data = await (await fetch("http://api.tvmaze.com/search/people?q=denzel+washington")).json()
+  
+  const {person} = data[0];
+  const {id} = person;
+  
+  let personData = await(await fetch(`http://api.tvmaze.com/people/${id}/castcredits?embed=show`)).json()
+  console.log(JSON.stringify(personData))
+}
 
 //Q16
 //Dropbox : https://www.dropbox.com/fr/
